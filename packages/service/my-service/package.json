@@ -1,0 +1,43 @@
+{
+  "name": "@nx-report/my-service",
+  "version": "0.0.1",
+  "description": "nx report service",
+  "type": "module",
+  "main": "./build/src/index.js",
+  "imports": {
+    "#src/*": "./src/*",
+    "#root/*": "./*"
+  },
+  "exports": {
+    "./package.json": "./package.json",
+    ".": {
+      "types": "./src/index.ts",
+      "default": "./build/src/index.js"
+    }
+  },
+  "typings": "./src/index.ts",
+  "directories": {
+    "lib": "src"
+  },
+  "files": [
+    "build",
+    "package.json"
+  ],
+  "devDependencies": {
+    "@swc/cli": "^0.4.1-nightly.20240914",
+    "@swc/core": "^1.7.39",
+    "@tsconfig/recommended": "^1.0.7",
+    "@types/node": "^22.7.9",
+    "class-transformer": "^0.5.1",
+    "class-validator": "^0.14.1",
+    "eslint": "^9.13.0",
+    "nx": "^20.0.5",
+    "nx-cloud": "^19.1.0",
+    "prettier": "^3.3.3",
+    "reflect-metadata": "^0.2.2",
+    "tslib": "^2.8.0",
+    "typescript": "^5.6.3"
+  },
+  "scripts": {
+  }
+}

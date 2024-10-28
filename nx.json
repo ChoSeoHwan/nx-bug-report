@@ -1,0 +1,65 @@
+{
+  "release": {
+    "projects": [
+      "packages/common/*",
+      "packages/server/*",
+      "packages/service/*/*"
+    ],
+    "conventionalCommits": {
+      "types": {
+        "feat": {
+          "semverBump": "minor",
+          "changelog": { "title": "🚀 신규 기능" }
+        },
+        "fix": {
+          "semverBump": "patch",
+          "changelog": { "title": "🩹 버그 수정" }
+        },
+        "chore": { "semverBump": "patch", "changelog": { "title": "🏡 기타" } },
+        "revert": {
+          "semverBump": "patch",
+          "changelog": { "title": "⏪ 되돌리기" }
+        },
+        "build": {
+          "semverBump": "patch",
+          "changelog": { "title": "📦 Build" }
+        },
+        "refactor": {
+          "semverBump": "patch",
+          "changelog": { "title": "💅 리팩토링" }
+        },
+        "perf": {
+          "semverBump": "patch",
+          "changelog": { "title": "🚀 성능 개선" }
+        },
+        "style": {
+          "semverBump": "patch",
+          "changelog": { "title": "💄 스타일" }
+        },
+        "ci": { "semverBump": "none", "changelog": { "title": "🔧 CI" } },
+        "docs": { "semverBump": "none", "changelog": { "title": "📖 문서화" } },
+        "test": { "semverBump": "none", "changelog": { "title": "✅ 테스트" } },
+        "merge": { "semverBump": "none", "changelog": { "hidden": true } },
+        "release": { "semverBump": "none", "changelog": { "hidden": true } }
+      }
+    }
+  },
+  "targetDefaults": {
+    "@nx/jest:jest": {
+      "cache": true,
+      "inputs": ["default", "^default", "{workspaceRoot}/jest.preset.js"],
+      "outputs": ["{projectRoot}/.jest"],
+      "options": {
+        "passWithNoTests": true,
+        "jestConfig": "{projectRoot}/jest.config.ts"
+      },
+      "configurations": {
+        "ci": {
+          "ci": true,
+          "codeCoverage": true
+        }
+      }
+    }
+  },
+  "affected": { "defaultBase": "main" }
+}

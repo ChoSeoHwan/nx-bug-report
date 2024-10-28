@@ -1,0 +1,18 @@
+*
+
+# package
+!.yarn/cache
+!.yarn/releases
+!.pnp.cjs
+!.pnp.loader.mjs
+!.yarnrc.yml
+!yarn.lock
+!package.json
+
+# nx
+!nx.json
+!project.json
+
+# sources
+!packages
+!tsconfig.base.json

@@ -1,0 +1,29 @@
+{
+  "extends": "@tsconfig/recommended",
+  "compileOnSave": false,
+  "compilerOptions": {
+    "module": "NodeNext",
+    "moduleResolution": "NodeNext",
+    "target": "ESNext",
+    "rootDir": ".",
+    "baseUrl": ".",
+    "allowJs": false,
+    "strict": true,
+    "strictNullChecks": true,
+    "declaration": true,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "noImplicitOverride": true,
+    "importHelpers": true,
+    "lib": ["es2020", "dom"],
+    "types": ["node"],
+    "skipLibCheck": true,
+    "skipDefaultLibCheck": true,
+    "isolatedModules": true,
+    "verbatimModuleSyntax": true,
+    "jsx": "react"
+  },
+  "exclude": ["node_modules", "tmp"]
+}

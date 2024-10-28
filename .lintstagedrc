@@ -1,0 +1,4 @@
+{
+  ".lintstagedrc": "yarn exec eslint --fix",
+  "./*.{yaml,yml,config.js,config.ts,preset.js,json}": "yarn exec eslint --fix"
+}
