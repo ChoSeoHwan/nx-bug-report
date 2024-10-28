@@ -2,6 +2,14 @@
 
 Webstorm NX Console Plugin does not wokring in yarn pnp
 
+## ENVIRONMENT
+
+- OS : windows 10
+- Webstorm : Build #WS-242.23726.96, built on October 22, 2024
+- Node : v22.9.0
+- NX Console : 1.32.4
+- Yarn : 4.5.1
+
 ## REPRODUCTION
 
 1. clone git repository
